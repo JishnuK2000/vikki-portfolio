@@ -2,8 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import BuyCrypto from "./buy-form";
-import SellCrypto from "./sell-form";
+
 import CardSlider from "./slider";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -133,7 +132,6 @@ const Hero = () => {
                 className="text-white hover:text-primary text-24 inline-block me-2"
               />
             </button>
-            <BuyCrypto />
           </div>
         </div>
       )}
@@ -153,7 +151,6 @@ const Hero = () => {
                 className="text-white hover:text-primary text-24 inline-block me-2"
               />
             </button>
-            <SellCrypto />
           </div>
         </div>
       )}

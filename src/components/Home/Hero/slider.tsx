@@ -3,27 +3,14 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { pricedeta } from "@/app/api/data";
+import { myWorks } from "@/app/api/data";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const CardSlider = () => {
   const [prices, setPrices] = useState<Record<string, { usd: number }>>({});
 
-  useEffect(() => {
-    const fetchPrices = async () => {
-      const ids = pricedeta.map((item) => item.title.toLowerCase()).join(",");
-      const response = await fetch(
-        `/api/crypto-price?ids=${ids}&vs_currency=usd`
-      );
-      const data = await response.json();
-      setPrices(data);
-    };
-
-    fetchPrices();
-    const interval = setInterval(fetchPrices, 30000);
-    return () => clearInterval(interval);
-  }, []);
+  
 
   const settings = {
     autoplay: true,
@@ -69,14 +56,14 @@ const CardSlider = () => {
       </div>
 
       <Slider {...settings}>
-        {pricedeta.map((item, index) => (
+        {myWorks.map((item, index) => (
           <div key={index} className="pr-6">
             <div className="px-5 py-6 bg-dark_grey/80 rounded-xl">
               <div className="flex flex-col items-center gap-5">
                 <div>
                   <Image
                     src={item.icon}
-                    alt={`${item.title} icon`}
+                    alt={`icon`}
                     width={400}
                     height={400}
                   />
