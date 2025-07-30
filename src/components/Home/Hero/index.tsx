@@ -7,6 +7,12 @@ import CardSlider from "./slider";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import BrandLogo from "../BrandLogo";
+import {
+  CircularProgressbarWithChildren,
+  buildStyles,
+} from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import { AnimatedProgress } from "./circularProgress";
 
 const Hero = () => {
   const [isBuying, setIsBuyingOpen] = useState(false);
@@ -71,7 +77,6 @@ const Hero = () => {
                 Hi, I’m Vikki{" "}
               </h1>
               <p className="text-white">
-                {" "}
                 A passionate and detail-oriented designer who believes in the
                 power of visual storytelling. With a strong eye for aesthetics
                 and a heart full of creativity, I love turning ideas into
@@ -83,6 +88,39 @@ const Hero = () => {
                 sketching new ideas, exploring design trends, or sipping on a
                 hot cup of coffee thinking about the next big concept.
               </p>
+
+              {/* Skills Section */}
+              <div className="mt-6">
+                {/* <h2 className="text-4xl text-white font-semibold mb-4 text-left">
+                  Tools I Use
+                </h2> */}
+                <div className="flex gap-8 justify-center flex-wrap">
+                  <AnimatedProgress
+                    value={90}
+                    icon="/images/software/ps.png"
+                    alt="Photoshop"
+                    color="#31A8FF"
+                  />
+                  <AnimatedProgress
+                    value={85}
+                    icon="/images/software/ai.png"
+                    alt="Illustrator"
+                    color="#FF9A00"
+                  />
+                  <AnimatedProgress
+                    value={80}
+                    icon="/images/software/ae.png"
+                    alt="After Effects"
+                    color="#D291FF"
+                  />
+                  <AnimatedProgress
+                    value={75}
+                    icon="/images/software/pr.png"
+                    alt="Premiere Pro"
+                    color="#9999FF"
+                  />
+                </div>
+              </div>
             </div>
             <div className="flex items-center md:justify-start justify-center gap-8">
               <Link

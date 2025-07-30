@@ -17,6 +17,14 @@ export const myWorks: {
     padding: "px-4 py-3",
   },
   {
+    icon: "/images/works/vki.jpeg",
+    background: "bg-warning/20",
+
+    width: 18,
+    height: 23,
+    padding: "px-4 py-3",
+  },
+  {
     icon: "/images/works/IMG2.JPG",
     background: "bg-light_grey",
 
