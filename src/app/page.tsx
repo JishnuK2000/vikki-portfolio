@@ -11,7 +11,7 @@ import BrandLogo from '@/components/Home/BrandLogo'
 import GlobalReach from '@/components/Home/GlobalReach'
 import Faq from '@/components/Home/Faq'
 export const metadata: Metadata = {
-  title: 'Vikki',
+  title: 'Hey I am Vikki',
 }
 
 export default function Home() {
